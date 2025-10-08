@@ -1,0 +1,18 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 1daybang0530@gmail.com        # 지메일 주소 (그대로)
+    password: "gbesotyawmjwfmct"  # 공백 없이!! 따옴표/꺽쇠 X
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.ssl.enable: false        # ★ SSL 소켓 금지 (587은 STARTTLS)
+      mail.smtp.ssl.trust: smtp.gmail.com
+      mail.debug: true
+
+app:
+  url: http://localhost:8080       # 인증 링크
+  frontend: http://localhost:5173  # 인증 성공 후 이동지
